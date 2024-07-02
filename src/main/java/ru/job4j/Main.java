@@ -5,4 +5,3 @@ public class Main {
         System.out.println("Привет, мир");
     }
 }
-//git remote add origin git@github.com:Kirbri/job4j_elementary.git
