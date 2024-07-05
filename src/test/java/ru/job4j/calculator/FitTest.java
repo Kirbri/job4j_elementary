@@ -9,16 +9,15 @@ class FitTest {
     @Test
     public void whenManHeight187ThenCorrectWeight() {
         short heightMan = 187;
-        double expectedWeight = (heightMan - 100) * 1.15;
+        double expectedWeight = 100.05;
         double actualWeight = Fit.calculateWeight(heightMan, true);
-
         assertThat(actualWeight).isEqualTo(expectedWeight);
     }
 
     @Test
     public void whenWomanHeight170ThenCorrectWeight() {
         short heightWoman = 170;
-        double expectedWeight = (heightWoman - 110) * 1.15;
+        double expectedWeight = 69;
         double actualWeight = Fit.calculateWeight(heightWoman, false);
 
         assertThat(actualWeight).isEqualTo(expectedWeight);
