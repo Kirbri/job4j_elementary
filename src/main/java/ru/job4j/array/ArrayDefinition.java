@@ -19,8 +19,8 @@ public class ArrayDefinition {
         names[3] = "Владстон";
 
         System.out.println("Имена из массива names: ");
-        for (int i = 0; i < names.length; i++) {
-            System.out.println(names[i]);
+        for (String name : names) {
+            System.out.println(name);
         }
 
     }
