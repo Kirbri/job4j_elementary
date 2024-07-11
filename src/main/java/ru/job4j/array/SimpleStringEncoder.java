@@ -6,24 +6,15 @@ public class SimpleStringEncoder {
         char symbol1 = input.charAt(0);
         int counter = 1;
         for (int i = 1; i < input.length(); i++) {
-            char symbol2 = input.charAt(i);
-            if (symbol1 == symbol2) {
+            if (symbol1 == input.charAt(i)) {
                 counter++;
-            } else if (counter > 1) {
-                result = result + symbol1 + counter;
+            } else {
+                result = counter > 1 ?  result + symbol1 + counter : result + symbol1;
                 counter = 1;
                 symbol1 = input.charAt(i);
-            } else {
-                result = result + symbol1;
-                symbol1 = input.charAt(i);
-            }
-            if (i == input.length() - 1 && counter > 1) {
-                result = result + symbol1 + counter;
-                break;
-            } else if (i == input.length() - 1) {
-                result = result + symbol1;
             }
         }
+        result = counter > 1 ?  result + symbol1 + counter : result + symbol1;
         return input.length() > 1 ? result : input;
     }
 }
