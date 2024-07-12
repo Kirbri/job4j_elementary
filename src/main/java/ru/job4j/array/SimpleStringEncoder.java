@@ -15,6 +15,6 @@ public class SimpleStringEncoder {
             }
         }
         result = counter > 1 ?  result + symbol1 + counter : result + symbol1;
-        return input.length() > 1 ? result : input;
+        return result;
     }
 }
