@@ -51,4 +51,13 @@ class PointTest {
         double output = x.distance3d(y);
         assertThat(output).isEqualTo(expected, withPrecision(0.001));
     }
+
+    @Test
+    void when1Minus85toMinus704then11dot358() {
+        double expected = 11.358;
+        Point x = new Point(1, -8, 5);
+        Point y = new Point(-7, 0, 4);
+        double output = x.distance3d(y);
+        assertThat(output).isEqualTo(expected, withPrecision(0.001));
+    }
 }
